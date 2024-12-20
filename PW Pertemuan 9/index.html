@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript</title>
+</head>
+<body>
+    <script>
+        console.log("Muhamad Iqbal");
+        document.write("Belajar Javascript<br>");
+        let nama = "Muhamad Iqbal";
+        document.write("Nama Saya ", nama);
+    </script>
+    <hr>
+    <h3>Menghitung luas dan keliling lingkaran</h3>
+    <input type="number" id="jari_jari" placeholder="masukan jari jari">
+    <button onclick="hitungLingkaran()">Hitung!</button>
+    <p>Luas Lingkaran : <span id="luas">0</span></p>
+    <p>Keliling Lingkaran : <span id="keliling">0</span></p>
+    <script>
+        function hitungLingkaran() {
+            let jari_jari = document.getElementById("jari_jari").value;
+            console.log(jari_jari);
+            const phi  = 3.14;
+            let luas = phi * (jari_jari * jari_jari**2);
+            let keliling = 2 * phi * jari_jari;
+            console.log(luas, keliling);
+
+            document.getElementById('luas').innerHTML = luas;
+            document.getElementById('keliling').innerHTML = keliling;
+        }
+    </script>
+</body>
+</html>

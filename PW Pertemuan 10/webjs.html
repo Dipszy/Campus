@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar JS</title>
+        <script>
+            function fungsiku(){
+                var x = document.getElementById ("warna").value;
+                console.log("Pilih warna : " + x);
+                document.body.style.backgroundColor = x;
+            }
+
+
+            function konversi() {
+                let nilairupiah = 150000; 
+                let dollar = document.getElementById("dollar").value;
+                let rupiah = dollar * nilairupiah; 
+                document.getElementById("hasil").innerText = dollar + " Dolar = " + rupiah + " Rupiah";
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Pilih Warna:
+            <select id="warna" onchange="fungsiku()">
+                <option value="red">Merah</option>
+                <option value="green">Hijau</option>
+                <option value="blue">Biru</option>
+                <option value="yellow">Kuning</option>
+                <option value="black">Hitam</option>
+        </select>
+        <hr>
+        <h1>Konversi Dolar ke Rupiah</h1>
+        <label for="dollar">Masukkan jumlah dolar:</label>
+        <input type="number" id="dollar" placeholder="Jumlah Dolar">
+        <button onclick="konversi()">Konversi</button>
+        <p id="hasil"></p>
+        <br>
+        <br>
+
+        </form>
+    </body>
+</html>

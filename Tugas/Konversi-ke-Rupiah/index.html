@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Konversi Mata Uang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Konversi Mata Uang Ke Rupiah</h2>
+    <form id="currencyForm">
+      <label for="amount">Masukkan jumlah mata uang asing:</label>
+      <input type="number" id="amount" placeholder="Contoh: 100" required>
+
+      <label for="currency">Pilih mata uang yang akan dikonversi:</label>
+      <select id="currency">
+        <option value="USD">$ - Dollar Amerika</option>
+        <option value="SGD">SGD - Dollar Singapura</option>
+        <option value="MYR">RM - Ringgit Malaysia</option>
+        <option value="JPY">¥ - Yen Jepang</option>
+        <option value="EUR">€ - Euro</option>
+        <option value="SAR">SAR - Riyal Arab Saudi</option>
+      </select>
+
+      <button type="button" onclick="convertCurrencyToRupiah()">Konversi ke Rupiah</button>
+    </form>
+  </div>
+
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <p id="modalResult"></p>
+    </div>
+  </div>
+
+  <div id="currencyDetails">
+    <h2>Detail Mata Uang</h2>
+    <div id="USD" class="currency-detail">
+      <h3>Dollar Amerika (USD)</h3>
+      <p>Kurs: 1 USD = 9.915 IDR</p>
+      <p>Simbol: $</p>
+    </div>
+    <div id="SGD" class="currency-detail">
+      <h3>Dollar Singapura (SGD)</h3>
+      <p>Kurs: 1 SGD = 13.472 IDR</p>
+      <p>Simbol: SGD</p>
+    </div>
+    <div id="MYR" class="currency-detail">
+      <h3>Ringgit Malaysia (MYR)</h3>
+      <p>Kurs: 1 MYR = 872 IDR</p>
+      <p>Simbol: RM</p>
+    </div>
+    <div id="JPY" class="currency-detail">
+      <h3>Yen Jepang (JPY)</h3>
+      <p>Kurs: 1 JPY = 120 IDR</p>
+      <p>Simbol: ¥</p>
+    </div>
+    <div id="EUR" class="currency-detail">
+      <h3>Euro (EUR)</h3>
+      <p>Kurs: 1 EUR = 15.888 IDR</p>
+      <p>Simbol: €</p>
+    </div>
+    <div id="SAR" class="currency-detail">
+      <h3>Riyal Arab Saudi (SAR)</h3>
+      <p>Kurs: 1 SAR = 3.594 IDR</p>
+      <p>Simbol: SAR</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
